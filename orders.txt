@@ -1,0 +1,102 @@
+
+Customer: shiv yadav
+Time: Fri Jun 27 12:28:16 2025
+Pasta x 3 = ₹270.000000
+Chowmein x 3 = ₹240.000000
+Tax: ₹25.500000
+Total Paid: ₹535.500000
+--------------------------
+
+Customer: mohit
+Time: Fri Jun 27 19:54:53 2025
+Pizza x 3 = ₹300.000000
+Mojito x 2 = ₹100.000000
+Tax: ₹20.000000
+Total Paid: ₹420.000000
+--------------------------
+Customer: efgrfgf
+Time: Tue Jul 01 18:24:01 2025
+plain_dosa x 3 = Rs 300
+paneer65 x 2 = Rs 320
+Tax: Rs 31
+Total Paid: Rs 651
+--------------------------
+Customer: dfghuio
+Time: Tue Jul 01 21:15:53 2025
+plain_dosa x 3 = Rs 300
+paneer_tikka x 3 = Rs 540
+Tax: Rs 42
+Total Paid: Rs 882
+--------------------------
+Customer: sdf
+Time: Wed Jul 02 22:44:22 2025
+plain_dosa x 4 = Rs 400
+Tax: Rs 20
+Total Paid: Rs 420
+--------------------------
+Customer: asdfc
+Time: Wed Jul 02 22:47:27 2025
+plain_dosa x 4 = Rs 400.000000
+coldcoffee x 5 = Rs 400.000000
+Tax: Rs 40.000000
+Total Paid: Rs 840.000000
+--------------------------
+Customer: sdzxf
+Time: Wed Jul 02 22:53:03 2025
+masala_dosa x 3 = Rs 360.000000
+aloo_tikki_burger x 55 = Rs 5500.000000
+pizza x 4 = Rs 800.000000
+Tax: Rs 333.000000
+Discount: Rs 699.299988
+Total Paid: Rs 6293.700195
+--------------------------
+Customer: dsf
+Time: Wed Jul 02 22:58:30 2025
+plain_dosa x 3 = Rs 300.000000
+cheese_pizza x 44 = Rs 9680.000000
+Tax: Rs 499.000000
+Discount: Rs 1047
+Total Paid: Rs 9432
+--------------------------
+Customer: yadav
+Time: Thu Jul 03 16:16:18 2025
+plain_dosa x 4 = Rs 400
+chole x 6 = Rs 600
+Tax: Rs 50
+Discount: Rs 105
+Total Paid: Rs 945
+--------------------------
+Customer: ugjb
+Time: Thu Jul 03 16:32:02 2025
+medu_vada x 7 = Rs 560
+rajma x 7 = Rs 770
+Tax: Rs 66
+Discount: Rs 139
+Total Paid: Rs 1257
+--------------------------
+Customer: fds
+Time: Thu Jul 03 16:40:51 2025
+idli_sambar x 3 = Rs 270
+Tax: Rs 13
+Total Paid: Rs 283
+--------------------------
+Customer: sy
+Time: Thu Jul 03 19:36:25 2025
+brownie x 4 = Rs 280
+aloo_tikki_burger x 5 = Rs 500
+cheeseburger x 2 = Rs 240
+paneer65 x 4 = Rs 640
+paneer65 x 4 = Rs 640
+Tax: Rs 115
+Discount: Rs 241
+Total Paid: Rs 2174
+--------------------------
+Customer: shiv kumar yadav
+Time: Thu Jul 03 19:42:23 2025
+coldcoffee_special x 3 = Rs 330
+veg_roll x 6 = Rs 480
+plain_dosa x 22 = Rs 2200
+Tax: Rs 150
+Discount: Rs 316
+Total Paid: Rs 2844
+--------------------------

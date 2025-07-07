@@ -35,7 +35,9 @@ The **Restaurant Menu Order System** is a personal console-based application dev
 ✅ **Search Item**  
 - Users can search for items by partial name (case-sensitive).  
 - Filters and presents matches in a readable format.
-
+✅ **sortmenubyprice**
+-users can sortmenu by price (low to high).
+-Useful for learning sorting and file operations in C++.
 ✅ **Interactive Menu-Driven Flow**  
 - Easy-to-follow numbered menu options guide the user through the application.
 

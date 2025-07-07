@@ -5,7 +5,7 @@
 ---
 
 ## 📖 Overview  
-The **Restaurant Menu Order System** is a personal console-based application developed entirely using C++.
+The **Restaurant Menu Order System** is a personal console-based application developed entirely using C++..
  It provides a seamless and interactive user interface through the terminal, simulating a real-world restaurant's menu, order, and billing experience.
   This project was created to deepen hands-on understanding of C++ programming, particularly focusing on file handling,Object-Oriented Programming (OOP) modular design, and user-centric logic flow.
 

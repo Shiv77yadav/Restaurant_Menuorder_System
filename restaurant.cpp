@@ -73,7 +73,9 @@ public:
         }
 
         cout << "Enter your name: " << endl;
+        
         cin.ignore(); // space ko ignore krke next char pr chala jata h
+
         getline(cin, CustomerName);
 
         char choice = 'y';
@@ -97,6 +99,7 @@ public:
                 {
                     cout << "Enter quantity: ";
                     cin >> qty;
+
                     orderFile << mname << " " << qty << " " << mprice << endl;
                     find = true;
                     break;
@@ -111,6 +114,7 @@ public:
             }
 
             cout << "Do you want to order more? (y/n): ";
+
             cin >> choice;
         }
 
@@ -119,6 +123,7 @@ public:
     void generatebill(string customer_name)
     {
         ifstream order("order.txt");
+
         if (!order)
         {
             cout << "No current order place in history." << endl;
@@ -129,7 +134,9 @@ public:
         if (!(order >> test))
         {
             cout << "Order file is empty. no items order." << endl;
+
             order.close();
+
             return;
         }
 
@@ -137,10 +144,13 @@ public:
         order.open("order.txt"); // taki hum dubara starting se padh sake
 
         string existingContent = "";
+
         ifstream oldHistory("orders.txt");
+
         if (oldHistory)
         {
             string line;
+
             while (getline(oldHistory, line))
             {
                 existingContent += line + "\n"; // purana data overwrite na ho isliye
@@ -156,6 +166,7 @@ public:
 
         cout << endl
              << "--------- BILL ---------" << endl;
+
         cout << "Customer Name: " << customer_name << endl;
 
         time_t now = time(0); // real time print ho order m isliye ctime ki header file include kri
@@ -170,9 +181,11 @@ public:
         while (order >> name >> qty >> price)
         {
             int amount = qty * price;
+
             total = total + amount;
 
             string line = name + " x " + to_string(qty) + " = Rs " + to_string(amount);
+
             newContent += line + "\n"; // ek string bnakr order.txt file m save kr dega
             cout << line << endl;
         }
@@ -184,18 +197,23 @@ public:
         if (finaltotal > 1000)
         {
             discount = finaltotal * 0.10;
+
             finaltotal = finaltotal - discount;
         }
 
         cout << "Tax (5%): Rs " << tax << endl;
         if (discount > 0)
             cout << "Discount (10%): Rs " << discount << endl;
+
         cout << "Total Amount: Rs " << finaltotal << endl;
 
         newContent += "Tax: Rs " + to_string(tax) + "\n";
         if (discount > 0)
+
             newContent += "Discount: Rs " + to_string(discount) + "\n";
+
         newContent += "Total Paid: Rs " + to_string(finaltotal) + "\n"; // paise ko bhi string m badl kr file m save krenge
+
         newContent += "--------------------------\n";
 
         ofstream history("orders.txt");
@@ -238,6 +256,7 @@ public:
         {
             cout << "Menu file missing." << endl;
             return;
+
         }
 
         string input;
@@ -285,6 +304,63 @@ public:
         menu.close();
     }
 
+    void sortmenubyprice()
+{
+    ifstream menu("menu.txt");
+    if (!menu)
+    {
+        cout << "Menu file not found." << endl;
+        return;
+    }
+
+    // Structure for storing item
+    struct Item
+    {
+        int id;
+        string name;
+        float price;
+    };
+
+    Item items[1000]; //memory ko bachayega
+    int count = 0;
+
+    // File se item read karke array mein daalna
+    while (menu >> items[count].id >> items[count].name >> items[count].price)
+    {
+        count++; // total items ka count badhate jao
+    }
+    menu.close();
+
+//  low to high by price
+    for (int i = 0; i < count - 1; i++)
+
+    {
+        for (int j = 0; j < count - i - 1; j++)
+
+        {
+
+            if (items[j].price > items[j + 1].price)
+
+            {
+                // swap hoga
+                Item temp = items[j];
+                items[j] = items[j + 1];
+                items[j + 1] = temp;
+            }
+        }
+    }
+
+    // Sorted menu print hoga
+    cout << "\n--- Sorted Menu by Price (Low to High) ---"<<endl;
+
+    for (int i = 0; i < count; i++)
+    {
+        cout << items[i].id << " " << items[i].name << " ₹" << items[i].price << endl;
+
+    }
+
+}
+
     void run()
     {
         int choice;
@@ -298,7 +374,8 @@ public:
                  << "4. Generate Bill" << endl;
             cout << "5. View Order History" << endl
                  << "6. Search Item" << endl
-                 << "7. Exit"<<endl;
+                 << "7. sort menu by price"<<endl
+                 << "8. Exit"<<endl;
             cout << "Enter your choice: "<<endl;
             cin >> choice;
 
@@ -315,11 +392,16 @@ public:
             else if (choice == 6)
                 searchItem();
             else if (choice == 7)
+                 sortmenubyprice();
+            else if (choice == 8)
                 cout << "Thank you for using the system"<<endl;
             else
                 cout << "Invalid choice."<<endl;
-        } while (choice != 7);
+
+        } while (choice != 8);
+
     }
+
 };
 
 int main()

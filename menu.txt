@@ -31,3 +31,4 @@
 31 chocolate_milkshake 90
 32 vanilla_milkshake 85
 33  rice 80
+34 Tea 10
